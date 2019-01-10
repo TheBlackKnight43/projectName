@@ -1,0 +1,311 @@
+
+#$ {
+	width: 500px;
+	height: 100%;
+	position absolute;
+}
+
+.backimage{
+	background-size: cover;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+* {box-sizing: border-box;}
+#HeaderBar {
+	
+	border: 8px solid grey;
+	padding: 20px;
+	margin: 15px;
+	position: relative;
+	left: 1%;
+	background-color: #000000
+}
+#bandlogo{
+    position: absolute;
+    left: 25vw;
+    width: 25vw;
+	
+}
+#canvas2{
+	position: relative;
+	width: 85vw;
+	height: 17.5vw;
+}
+
+#theband{
+    position: relative;
+    width: 25vw;
+
+}
+p {
+    font-family: Ariel;
+    /*font-size: 1.2vw;*/
+	font-size: 20px;
+	text-align: left;
+	margin: 6px;
+	color: grey;
+	
+}
+strong {
+	font-size:1.5vw;
+	background-color: none;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+nav ul li {
+	background: #454040;
+	color: white;
+	display: inline-block;
+	list-style-type: none;
+	padding: 40px 60px;
+	font-size: 40px;
+	margin: 0px 70px 0px 20px;
+
+}
+#tabbar{
+    
+    border: 8px solid black;
+    padding: 0px 4.5%;
+    margin: 15px;
+	position:relative;
+	left: 1%;
+}
+
+
+h2 {
+	color: grey;
+	text-align: left;
+	font-size: 40px;
+	position: relative;
+}
+
+h3 {
+	font-size: 25px;
+	color: white;
+	
+}
+.iframe-container{
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+height: 0;
+color: red;
+}
+.iframe-container iframe{
+position: absolute;
+top:0;
+left: 0;
+width: 70%;
+height: 70%;
+color: red;
+}
+
+li {
+	color: grey;
+}
+
+#Infobox {
+	
+	
+	border: 6px solid black;
+	padding: 20px;
+	margin: 15px;
+	position: relative;
+	left: 20px;
+	top: 40px;
+	
+}
+
+#link1 {	
+	position: relative;
+	color: white;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.col {
+	float: left;
+	background: #000000;
+	margin: 1%;
+	width: 280px;
+	padding: 8.5px;
+	position: relative;
+}
+#textdesc{
+	color: #F63535
+}
+.row:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+#albumtxt{
+	text-decoration-style: solid;
+}
+#records{
+	
+	
+	border: none;
+	padding: 20px;
+	margin: 15px;
+	position: relative;
+	left: 20px;
+	top: 40px;
+	
+}
+
+/*#mvideo{
+	
+	
+	border: none;
+	padding: 20px;
+	margin: 15px;
+	position: relative;
+	left: 20px;
+	top: 40px;
+	
+}*/
+#DateBorder{
+	border: 6px solid black;
+	padding: 20px;
+	margin: 15px;
+	position: relative;
+	left: 20px;
+	top: 40px;
+	
+}
+.dat {
+	float: left;
+	
+	padding: 8px;
+	margin: 0%;
+	width: 20%;
+}
+
+.merchside {
+	float: left;
+	padding: 8px;
+	margin: 0%;
+	width: 20%;
+}
+
+.Mresponsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.Bresponsive {
+	max-width: 100%;
+	height: auto;
+}
+
+ /* Dropdown Button */
+.dropbtn {
+  border: 8px solid black;
+    padding: 0px 4.5%;
+    margin: 15px;
+	position:relative;
+	left: 1%;
+  cursor: pointer;
+  background: #454040;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+body
+			{				
+				background-size: 100% 100%;
+				background-color: #000000;
+				width: 95%;
+				height: 80%;	
+				margin: 1%;
+			} 
+
+		.rain:before
+		{
+			content: '';
+			position:absolute;
+			width:100%;
+			height:100%;
+			background: white;
+			animation: lighting 4s linear infinite;
+			opacity:0;
+
+		}  
+
+		@keyframes lighting
+		{
+			0%
+			{
+				opacity:0;
+			}
+			10%
+			{
+				opacity:0;
+			}
+			11%
+			{
+				opacity:1;
+			}
+			14%
+			{
+				opacity:0;
+			}
+			20%
+			{
+				opacity:0;
+			}
+			21%
+			{
+				opacity:1;
+			}
+			24%
+			{
+				opacity:0;
+			}
+			104%
+			{
+				opacity:0;
+			}
+		} 

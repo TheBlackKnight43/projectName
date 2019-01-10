@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<title>HeaderBar</title>
+<script src="JavaScript/myScript.js"></script>
+</HEAD>
+
+
+<body class="backimage" background="Images/Eclipse.jpg">
+<div class="rain"></div>
+<div = id= "HeaderBar">
+
+<img src="Images/Obituary Logo Cropped.jpg" alt "BandLogo"  align = "center" id="bandlogo">
+
+<img src="Images/Obituary Logo Cropped.jpg" alt "BandLogo"  align = "center" id="bandlogo">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<canvas id="canvas2" width="1700vw" height="350vw"></canvas>
+<script>
+ $ (document).ready(function() {
+ var canvas = $('#canvas2')[0];
+  
+
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+
+    var init = [];
+    var maxParts = 1000;
+    for (var a = 0; a < maxParts; a++) {
+      init.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        l: Math.random() * 1,
+        xs: -4 + Math.random() * 4 + 2,
+        ys: Math.random() * 10 + 10
+      })
+    }
+
+    var particles = [];
+    for (var b = 0; b < maxParts; b++) {
+      particles[b] = init[b];
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (var c = 0; c < particles.length; c++) {
+        var p = particles[c];
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+        ctx.stroke();
+      }
+      move();
+    }
+
+    function move() {
+      for (var b = 0; b < particles.length; b++) {
+        var p = particles[b];
+        p.x += p.xs;
+        p.y += p.ys;
+        if (p.x > w || p.y > h) {
+          p.x = Math.random() * w;
+          p.y = -20;
+        }
+      }
+    }
+
+    setInterval(draw, 30);
+
+  }
+});
+	</script>
+
+</div>
+
+
+		
+<div id="tabbar">
+<header>
+	<nav>
+		<ul>
+			<li><a href="Index.html"><h2>Home Tab</h2></a></li>
+			<li><a href="Tour.html"><h2>Tour Tab</h2></a></li>
+			
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn"><h2>Merch Tab</h2></button>
+			<div id="myDropdown" class="dropdown-content">
+			<button onclick="AboScrl()">CDs and Vinyl</button></a>
+			<br>
+			<button onclick="AlbScrl()">Shirts</button></a>			
+	</div>
+</div>
+			<li><a href="Band.html"><h2>Band Tab</h2></a></li>
+			<li><a href="Demo.html"><h2>Demo Tab</h2></a></li>
+		</ul>
+	</nav>
+</header>
+</div>
+
+<h2>CDs and Vinyl<h2/>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/TenTWaysTDie.png" class="Mresponsive" width="260" height="220"> 
+<p>"Ten Thousand Ways To Die" - Deluxe CD<p/>
+<p>$13.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/15_Selftitled.jpg" class="Mresponsive">
+<p>"Obituary" - Deluxe CD<p/>
+<p>$15.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/14_inkedinblood.png" class="Mresponsive">
+<p>"Inked In Blood" - Deluxe CD<p/>
+<p>$15.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/03_the_end_complete.jpg" class="Mresponsive" width="260" height="220">
+<p>"The End Complete" - Vinyl<p/>
+<p>$17.59<p/></div>
+
+
+<br><br><br><br><br><br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>Shirts<h2/>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/Cause of Death T.png" class="Mresponsive">
+<p>Cause of Death TShirt<p/>
+<p>$25.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/Inked T.png" class="Mresponsive">
+<p>Inked In Blood TShirt<p/>
+<p>$25.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/Oval T.png" class="Mresponsive">
+<p>Oval TShirt<p/>
+<p>$20.00<p/></div>
+
+<div class = "row">
+<div class = "merchside">
+<img src="Images/Brass Knuckles.png" class="Mresponsive">
+<p>Brass Knuckles Shirt<p/>
+<p>$25.00<p/></div>
+
+</body>
+</HTML> 

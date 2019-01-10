@@ -1,0 +1,213 @@
+ <!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<title>HeaderBar</title>
+<script src="JavaScript/myScript.js"></script>
+<meta charset="utf-8">
+</HEAD>
+<body>
+<body class="backimage" background="Images/Eclipse.jpg">
+<div class="rain"></div>
+
+
+
+<div = id= "HeaderBar">
+
+<img src="Images/Obituary Logo Cropped.jpg" alt "BandLogo"  align = "center" id="bandlogo">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+ 
+ <canvas id="canvas2" width="1700vw" height="350vw"></canvas>
+<script>
+ $ (document).ready(function() {
+ var canvas = $('#canvas2')[0];
+  
+
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+
+    var init = [];
+    var maxParts = 1000;
+    for (var a = 0; a < maxParts; a++) {
+      init.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        l: Math.random() * 1,
+        xs: -4 + Math.random() * 4 + 2,
+        ys: Math.random() * 10 + 10
+      })
+    }
+
+    var particles = [];
+    for (var b = 0; b < maxParts; b++) {
+      particles[b] = init[b];
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (var c = 0; c < particles.length; c++) {
+        var p = particles[c];
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+        ctx.stroke();
+      }
+      move();
+    }
+
+    function move() {
+      for (var b = 0; b < particles.length; b++) {
+        var p = particles[b];
+        p.x += p.xs;
+        p.y += p.ys;
+        if (p.x > w || p.y > h) {
+          p.x = Math.random() * w;
+          p.y = -20;
+        }
+      }
+    }
+
+    setInterval(draw, 30);
+
+  }
+});
+	</script>
+</div>
+
+<!--Links to other pages
+-->
+		
+<div id="tabbar">
+<header>
+	<nav>
+		<ul>
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn"><h2>Home Tab</h2></button>
+			<div id="myDropdown" class="dropdown-content">
+			<button onclick="AboScrl()">About</button></a>
+			<br>
+			<button onclick="AlbScrl()">Discography</button></a>
+			<br>
+			<button onclick="Scr5()">Music Videos</button></a>
+	</div>
+</div> 		
+			<li><a href="Tour.html"><h2>Tour Tab</h2></a></li>
+			<li><a href="Merch.html"><h2>Merch Tab</h2></a></li>
+			<li><a href="Band.html"><h2>Band Tab</h2></a></li>
+			<li><a href="Demo.html"><h2>Demo Tab</h2></a></li>
+		</ul>
+	</nav>
+</header>
+</div>
+
+ 
+
+<!--Information about band
+-->
+<div id="Infobox">
+<h2>Obituary</h2>
+<img src="Images/BandImg.jpg" alt "TehBand" id= "theband">
+<p id = "demo" >Obituary is an American death metal band formed in Tampa, Florida, in 1984. Initially called Executioner, the band changed their name to Xecutioner in 1986 to avoid confusion with the thrash metal band Executioner from Boston, and then changed their name once again to Obituary in 1988. 
+</p>
+</div>
+<!--Discography Section
+-->
+<div id = "records">
+<h2>Discography</h2>
+<p>Legendary death metal band OBITUARY return with their self-titled, 10th studio album, further cementing their legacy as one of the most important metal bands of all time! Picking up where 2014's critically acclaimed "Inked In Blood" left off, OBITUARY show no signs of slowing down as they continue to reign as Kings of their genre. Recorded at their home studio in Tampa, Florida, "Obituary" is a 10 track tour-de-force of bone-pulverising death metal that is as heavy, uncompromising and infectious as anything they've released in their historic, nearly 30-year career!<p/>
+<a id="link1" href="https://open.spotify.com/artist/0SbGI4sb8dAKFZnK7RFyhz">Click Here To Be Taken To Obituary's Spotify</a>
+
+
+<!--Albums
+-->
+
+<strong id = "textdesc" >
+
+	<div class="col"> 
+	<strong>The debut album of the death metal band Obituary released 1989</strong>
+<br>
+<img src="Images/01_slowly_we_rot.jpg" alt "Album1"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong color="white">Second album of the death metal band Obituary released September 1990</strong>
+<br>
+<img src="Images/02_cause_of_death.jpg" alt "Album2"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Third album of the death metal band Obituary released April 1992</strong>
+<br>
+<img src="Images/03_the_end_complete.jpg" alt "Album3" width="220" height="220"></div>
+
+
+
+	<div class="col">
+	<strong>Fourth album of the death metal band Obituary released September 1994	</strong>
+<br>
+<img src="Images/04_world_demise.jpg" alt "Album4"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Fifth album of the death metal band Obituary released April 1997</strong>
+<br>
+<img src="Images/06_back_from_the_dead.jpg" alt "Album5"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Sixth album of the death metal band Obituary released July 2005</strong>
+<br>
+<img src="Images/09_frozen_in_time.jpg" alt "Album6" width="220" height="220"></div>
+
+
+
+	<div class="col">
+	<strong>Seventh album of death metal band Obituary released August 2007	</strong>
+<br>
+<img src="Images/11_xecutioners_return.jpg" alt "Album7"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Eighth album of the death metal band Obituary released June 2009</strong>
+<br>
+<img src="Images/13_darkest_day.jpg" alt "Album8"  width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Ninth album of the death metal band Obituary released October 2014</strong>
+<br>
+<img src="Images/14_inkedinblood.png" alt "Album9" width="220" height="220"></div>
+	
+	<div class="col">
+	<strong>Tenth album of the death metal band Obituary released March 2017</strong>
+<br>
+<img src="Images/15_Selftitled.jpg" alt "Album10" width="220" height="220"></div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<div id ="mvideo">
+<br>
+<h2>Music Videos</h2>
+<!--<button onclick="TenTubeFunction();return false;">Click To View Ten Thousand Ways To Die</button>
+        <div id="video"></div>-->
+	
+<div class="iframe-container">
+<iframe width="600" height="420" src="https://www.youtube.com/embed/tEznVpX4MBE"></iframe>
+</div>
+<div class="iframe-container">
+<iframe width="600" height="420" src="https://www.youtube.com/embed/q3VuWq3NxEA">
+</iframe>
+</div>
+<div class="iframe-container">
+<iframe width="600" height="420" src="https://www.youtube.com/embed/ehQtpXHCdJI">
+</iframe>
+</div>
+<div class="iframe-container">
+<iframe width="600" height="420" src="https://www.youtube.com/embed/H4Kf6af3gCk">
+</iframe>
+</div>
+<!--nit(window.innerwidth-->
+</body>
+</HTML> 

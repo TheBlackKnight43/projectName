@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<title>HeaderBar</title>
+<script src="JavaScript/myScript.js"></script>
+</HEAD>
+
+
+<body class="backimage" background="Images/Eclipse.jpg">
+<div class="rain"></div>
+<div = id= "HeaderBar">
+<img src="Images/Obituary Logo Cropped.jpg" alt "BandLogo"  align = "center" id="bandlogo">
+
+<img src="Images/Obituary Logo Cropped.jpg" alt "BandLogo"  align = "center" id="bandlogo">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+ 
+ <canvas id="canvas2" width="1700vw" height="350vw"></canvas>
+<script>
+ $ (document).ready(function() {
+ var canvas = $('#canvas2')[0];
+  
+
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+
+    var init = [];
+    var maxParts = 1000;
+    for (var a = 0; a < maxParts; a++) {
+      init.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        l: Math.random() * 1,
+        xs: -4 + Math.random() * 4 + 2,
+        ys: Math.random() * 10 + 10
+      })
+    }
+
+    var particles = [];
+    for (var b = 0; b < maxParts; b++) {
+      particles[b] = init[b];
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (var c = 0; c < particles.length; c++) {
+        var p = particles[c];
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+        ctx.stroke();
+      }
+      move();
+    }
+
+    function move() {
+      for (var b = 0; b < particles.length; b++) {
+        var p = particles[b];
+        p.x += p.xs;
+        p.y += p.ys;
+        if (p.x > w || p.y > h) {
+          p.x = Math.random() * w;
+          p.y = -20;
+        }
+      }
+    }
+
+    setInterval(draw, 30);
+
+  }
+});
+	</script>
+</div>
+
+
+		
+<div id="tabbar">
+<header>
+	<nav>
+		<ul>
+			<li><a href="Index.html"><h2>Home Tab</h2></a></li>
+			<li><a href="Tour.html"><h2>Tour Tab</h2></a></li>
+			<li><a href="Merch.html"><h2>Merch Tab</h2></a></li>
+			
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn"><h2>Band Tab</h2></button>
+			<div id="myDropdown" class="dropdown-content">
+			<button onclick="AboScrl()">Vocals</button></a>
+			<br>
+			<button onclick="Scr2()">Drums</button></a>
+			<br>		
+			<button onclick="Scr3()">Rhythm Guitar</button></a>
+			<br>
+			<button onclick="Scr4()">Bass</button></a>
+			<br>
+			<button onclick="Scr5()">Lead Guitar</button></a>		
+	</div>
+</div>
+<li><a href="Demo.html"><h2>Demo Tab</h2></a></li>
+		</ul>
+	</nav>
+</header>
+</div>
+
+<h2>Band Members</h2>
+
+<h3>John Tardy - Vocals</h3>
+<img src="Images/johntardy.jpg" alt "Vocals" class="Bresponsive" width="260" height="220">
+<h3>About</h3>
+<p>John Tardy (born March 15, 1968) is an American vocalist best known for his work</p> 
+<p>with the death metal band Obituary and Tardy Brothers. He is the brother of Donald</p>
+<p>Tardy who is the drummer of Obituary.</p>
+<br>
+<br>
+
+<h3>Donald Tardy - Drums</h3>
+<img src="Images/donaldtardy.jpg" alt "Drums" class="Bresponsive" width="260" height="220">
+<h3>About</h3>
+<p>Donald 'DT' Tardy (born January 28, 1970) is the drummer of death metal band Obituary</p> 
+<p>and the brother of John Tardy, who is the lead singer of the band. Besides Obituary, they </p>
+<p>have a band called Tardy Brothers, where, as primary songwriter and engineer, Donald also </p>
+<p>plays guitar and bass, as well as drums. Donald also played drums for Andrew W.K on the</p> 
+<p>album I Get Wet and was Andrew W.K.'s first touring drummer who also assisted with  </p>
+<p>assembling the original Andrew W.K. lineup.</p>
+<h3>Equipment</h3>
+<li>22X17 bd x 2 12x9 tt 13x10 tt 15x14 ft 16x15 ft 14x6 sd
+<li>FP-9500C x2
+<li>HS-1200T
+<li>SS-950
+<li>CS-865 x 6
+
+<h3>Trevor Peres - Rhythm Guitar</h3>
+<img src="Images/trevor-peres.jpg" alt "RGuitar" class="Bresponsive" width="260" height="220">
+<h3>About</h3>
+<p>Trevor Peres (born July 25, 1969) is an American heavy metal musician best known as the guitarist,</p> <p>songwriter and one of the founding members of the death metal band Obituary.</p>
+<h3>Equipment</h3>
+<li>Guitar: Fender Standard Stratocaster HSS (Duplicate)
+<li>Amp: Marshall JCM800 Mk II Super Lead
+<li>Pedals: Pro Co RAT Distortion Pedal + Boss NS-2 Noise Suppressor Pedal
+<br>
+<br>
+
+<h3>Terry Butler - Bass</h3>
+<img src="Images/terry-butler.jpg" alt "Bass" class="Bresponsive" width="260" height="220">
+<h3>About</h3>
+<p>Terry Butler is an American bassist who currently performs with the death metal bands Obituary and Massacre. He was also a member of Six Feet Under and Death. He was credited on the Death album Spiritual Healing, and band leader Chuck Schuldiner stated that on the latter Death album "Terry contributed to the songwriting as well".
+He is married with three children, and is brother-in-law of former bandmate Greg Gall.
+Before he joined Six Feet Under, he was in Massacre with Rick Rozz, whom he played with in Leprosy-era Death. In an interview, Butler has stated: "I'd rather be popular in the underground, than be unknown in the mainstream."</p>
+<h3>Equipment</h3>
+<li>Bass: ESP LTD Phoenix 204
+<li>Amp: Ampeg SVT-CL Classic Bass Head
+
+<h3>Kenny Andrews - Lead Guitar</h3>
+<img src="Images/Kenny Andrews.jpg" alt "LGuitar" class="Bresponsive" width="260" height="220">
+<h3>About</h3>
+<p>Kenny Andrews is the lead guitarist of the Death Metal band Obituary from 2012 to present.</p>
+<h3>Equipment</h3>
+<li>Guitar: ESP LTD MH-1000
+
+</body>
+</HTML> 
